@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:todom/Screens/task_screen.dart';
-import 'package:todom/Widgets/task_list.dart';
 import 'package:todom/models/task.dart';
 
 class AddTaskScreen extends StatefulWidget {
@@ -39,16 +37,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             controller: _controller,
             autofocus: true,
             textAlign: TextAlign.center,
-            // onChanged: (newTaskWritten) {
-            //   newTask = newTaskWritten;
-            // },
           ),
           SizedBox(height: 10.0),
 
           ElevatedButton(
             onPressed: () {
               widget.addTask(Task(name: _controller.text));
-              // widget.addTask(_controller.text);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.indigo,
