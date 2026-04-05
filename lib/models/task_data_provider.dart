@@ -1,15 +1,22 @@
+import 'dart:collection';
+
 import 'package:flutter/cupertino.dart';
 import 'package:todom/models/task.dart';
 
 class TaskDataProvider extends ChangeNotifier {
-  List<Task> tasks = [];
+  List<Task> _tasks = [];
+
+  UnmodifiableListView<Task> get tasks {
+    return UnmodifiableListView(_tasks);
+  }
+
   void addNewTask(Task newTask) {
-    tasks.add(newTask);
+    _tasks.add(newTask);
     notifyListeners();
   }
 
   void toggleStatus(int index) {
-    tasks[index].toggleDone();
+    _tasks[index].toggleDone();
     notifyListeners();
   }
 }

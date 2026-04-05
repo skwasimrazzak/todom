@@ -3,14 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:todom/Widgets/task_tile.dart';
 import 'package:todom/models/task_data_provider.dart';
 
-class TaskList extends StatefulWidget {
+class TaskList extends StatelessWidget {
   const TaskList({super.key});
 
-  @override
-  State<TaskList> createState() => _TaskListState();
-}
-
-class _TaskListState extends State<TaskList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
