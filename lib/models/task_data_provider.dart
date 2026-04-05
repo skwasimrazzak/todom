@@ -6,7 +6,6 @@ class TaskDataProvider extends ChangeNotifier {
   void addNewTask(Task newTask) {
     tasks.add(newTask);
     notifyListeners();
-    // Navigator.pop(context);
   }
 
   void toggleStatus(int index) {

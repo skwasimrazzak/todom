@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-// import 'package:todom/models/task.dart';
+import 'package:todom/models/task.dart';
 import 'package:todom/models/task_data_provider.dart';
 
 class AddTaskScreen extends StatefulWidget {
-  // final List<Task> taskList;
-  // final Function addTask;
-  const AddTaskScreen({
-    super.key,
-    // required this.taskList,
-    // required this.addTask,
-  });
+  const AddTaskScreen({super.key});
 
   @override
   State<AddTaskScreen> createState() => _AddTaskScreenState();
@@ -44,7 +38,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
 
           ElevatedButton(
             onPressed: () {
-              // widget.addTask(Task(name: _controller.text));
               context.read<TaskDataProvider>().addNewTask(
                 Task(name: _controller.text),
               );

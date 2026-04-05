@@ -2,24 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todom/Screens/add_task_screen.dart';
 import 'package:todom/Widgets/task_list.dart';
-import 'package:todom/models/task.dart';
 import 'package:todom/models/task_data_provider.dart';
 
 class TaskScreen extends StatelessWidget {
   const TaskScreen({super.key});
-
-  //   @override
-  //   State<TaskScreen> createState() => _TaskScreenState();
-  // }
-  //
-  // class _TaskScreenState extends State<TaskScreen> {
-  //   List<Task> tasks = [];
-  //   void addNewTask(Task newTask) {
-  //     setState(() {
-  //       tasks.add(newTask);
-  //     });
-  //     Navigator.pop(context);
-  //   }
 
   @override
   Widget build(BuildContext context) {
